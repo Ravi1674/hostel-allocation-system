@@ -1,25 +1,44 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import Header from "./Components/Header";
+import { BrowserRouter, Route, Switch } from "react-router-dom";
+import UserBook from "./pages/UserBook";
+import SelectHostel from "./pages/SelectHostel";
+import SelectHostelWing from "./pages/SelectHostelWing";
+import SelectHostelFloor from "./pages/SelectHostelFloor";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  // name = firebase.auth().currentUser.displayName;
+  render() {
+    return (
+      <>
+        <BrowserRouter>
+        <Route path="/">
+              <Header/>
+            </Route>
+          <Switch>
+            
+            <Route exact path="/userbook">
+              <UserBook />
+            </Route>
+            <Route exact path="/selecthostel">
+              <SelectHostel />
+            </Route>
+            <Route exact path="/selecthostel-wing/:gender">
+              <SelectHostelWing />
+            </Route>
+            <Route exact path="/selecthostel-floor/:floorNo">
+              <SelectHostelFloor />
+            </Route>
+            
+          </Switch>
+          <Route path="/userbook">
+              <UserBook />
+          </Route>
+        </BrowserRouter>
+      </>
+    );
+  }
 }
 
 export default App;

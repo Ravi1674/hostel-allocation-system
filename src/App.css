@@ -1,11 +1,9 @@
 .App {
   text-align: center;
+  height: 90px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
+
 
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
@@ -13,15 +11,10 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.rightNav{
+  float: right;
+  margin-top: 10px;
+  /* margin-bottom: 100px; */
 }
 
 .App-link {
@@ -35,4 +28,183 @@
   to {
     transform: rotate(360deg);
   }
+}
+.showBox{
+  margin: 100px auto;
+  border: 1px solid black;
+  height: 50vh;
+  width: 40vw;
+  border-radius: 20px;
+}
+.bookBox{
+  margin-top: 10px;
+  padding: 0 100px;
+  font-weight: bold;
+  font-size: larger;
+}
+
+.select{
+  display: flex;
+  margin: auto;
+  width: 70%;
+  justify-content: space-evenly;
+  padding-top: 70px;
+}
+.select img{
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+}
+.boys, .girls{
+  /* display: flex; */
+  width: 300px;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 20px;
+}
+.girls{
+  background-color: lightpink;
+}
+.boys{
+  background-color: lightblue;
+}
+.hostelWing{
+  display: flex;
+  margin: auto;
+  width: 30%;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  padding-top: 50px;
+}
+.hostelWing>div{
+  height: 80px;
+  color: white;
+  font-size: xx-large;
+  font-weight: bolder;
+  text-align: center;
+  height: auto;
+  width: auto;
+  background-color: gray;
+  margin: 20px;
+  border-radius: 10px;
+  flex: 0 0 17%;
+  /* flex-basis: 17%; */
+  cursor: pointer;
+}
+div>h3{
+  margin: 18%;
+}
+.selectFloor{
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.roomBox{
+  margin-top: 30px;
+  width:300px;
+  height:300px;
+  border:2px solid gray;
+  border-radius: 10%;
+  margin: auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.floorDrop{
+  margin-bottom: 30px;
+  height: 30px;
+  width: 80px;
+  border-radius:5px;
+  cursor: pointer;
+}
+.roomSelection{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-gap: 30px;
+}
+.roomNo
+  {
+    cursor: pointer;
+    width:40px;
+    height:50px;
+    background: rgb(86, 173, 86);
+    color: white;
+    font-weight:900;
+    border-radius: 20%;
+    border-style: none;
+    font-weight: bolder;
+    font-size: larger;
+  }
+.hide{
+  visibility: hidden;
+  /* background-color: white; */
+}
+.grey{
+  background: grey;
+}
+.bookRoom{
+  background: #4eb5f1;
+
+  margin-top: 1rem;
+  width:10rem;
+  height:2rem;
+  border-style: none;
+  border-radius: 2em;
+  margin-left:0.3rem;
+  margin-right:0.3rem;  
+  color:white;
+  cursor: pointer;
+}
+.mymodal {
+  position: fixed;
+  top: 55%;
+  left: 50%;
+  width:30rem;
+  height:22rem;
+  transform: translate(-50%, -50%);
+  
+
+  background: rgba(134, 207, 209, 0.9);
+  overflow: auto;
+  border-radius: 2rem;
+  outline: none;
+  border-style: none;
+  padding: 50px;
+}
+
+.myoverlay {
+  position: fixed;
+  top: 0.5;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(128, 96, 96, 0.904);
+}
+.ReactModal__Overlay {
+  opacity: 0;
+  transition: opacity 500ms ease-in-out;
+}
+
+.ReactModal__Overlay--after-open {
+  opacity: 1;
+}
+
+.ReactModal__Overlay--before-close {
+  opacity: 0;
+}
+
+.container-modal{
+  display:flex;
+  
+  align-content: center;
+  
+}
+.modal{
+    display: flex;
+    flex-direction: column;
+    margin-top: 4rem;
 }
