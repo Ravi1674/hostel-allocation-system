@@ -109,6 +109,7 @@ function SelectHostelFloor () {
           <div style={{ marginTop: 20, fontWeight:'bolder' }}>
             Hostel No. <span style={{color:"red"}}>{floorNo}</span>
           </div>
+          <div style={{ marginTop: 10, fontWeight:'bolder' }}>Floor No. <span style={{color:"red"}}>{floor}</span></div>
           <div style={{ marginTop: 10, fontWeight:'bolder' }}>Room No. <span style={{color:"red"}}>{roomNo}</span></div>
           </div>
         </div>
